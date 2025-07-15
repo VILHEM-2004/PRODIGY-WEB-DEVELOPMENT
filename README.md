@@ -14,7 +14,7 @@ This repository features five distinct tasks completed as part of the internship
 - Project Description:
 Welcome to SecureBank — a modern and responsive online banking interface. This task simulates a secure digital banking experience, allowing users to view account details, perform transactions, and manage finances with ease. Built using HTML, CSS, and JavaScript, SecureBank focuses on intuitive design, user experience, and basic front-end security principles.
 
-- Technologies Used: HTMl, CSS, JavaScript, VsCode
+- Technologies Used: HTMl, CSS, JavaScript, VsCode.
 
 - [Link to Project Repository](https://github.com/VILHEM-2004/PRODIGY-WEB-DEVELOPMENT/tree/main/PRODIGY_WD_01)
 
@@ -40,7 +40,7 @@ Welcome to the Stopwatch Web Application — a precise and user-friendly tool de
    - Project Description:
 This project is a classic Tic-Tac-Toe game built using HTML, CSS, and JavaScript. It offers a simple, interactive, and enjoyable gameplay experience directly in the browser. The code is clean and beginner-friendly, making it a great example for those learning the fundamentals of web development and game logic. Feel free to explore, play, and modify the game to enhance your skills!
 
-- Technologies Used:  HTMl, CSS, JavaScript, VsCode
+- Technologies Used:  HTMl, CSS, JavaScript, VsCode.
 
 - [Link to Project Repository](https://github.com/VILHEM-2004/PRODIGY-WEB-DEVELOPMENT/tree/main/PRODIGY_WD_03)
 
@@ -53,7 +53,7 @@ This project is a classic Tic-Tac-Toe game built using HTML, CSS, and JavaScript
     - Project Description:
 Welcome to my portfolio — a curated collection of my projects, technical skills, and professional experiences. This site offers an overview of my work across various domains in web development and programming. Feel free to explore each section to learn more about my capabilities, accomplishments, and the technologies I work with.
 
-- Technologies Used:  HTMl, CSS, JavaScript, VsCode
+- Technologies Used:  HTMl, CSS, JavaScript, VsCode.
   
 - [Link to Project Repository](https://github.com/VILHEM-2004/PRODIGY-WEB-DEVELOPMENT/tree/main/PRODIGY_WD_04)
 
@@ -66,7 +66,7 @@ Welcome to my portfolio — a curated collection of my projects, technical skill
     - Project Description:
 Welcome to the Weather App — a responsive web application that provides real-time weather information for any city worldwide. Users can search by city name to view current weather conditions, including temperature, humidity, and weather descriptions. The app supports both Celsius and Fahrenheit units, offering a user-friendly experience across all devices through its modern, responsive design.
 
-- Technologies Used:  HTMl, CSS, JavaScript, VsCode, OpenWeather API
+- Technologies Used:  HTMl, CSS, JavaScript, VsCode, OpenWeather API.
   
 - [Link to Project Repository](https://github.com/VILHEM-2004/PRODIGY-WEB-DEVELOPMENT/tree/main/PRODIGY_WD_05)
 
