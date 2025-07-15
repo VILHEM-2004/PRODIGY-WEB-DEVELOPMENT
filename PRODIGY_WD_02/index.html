@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>STOPWATCH ⏱️</h1>
+        </header>
+
+        <main>
+            <div class="stopwatch-display">
+                <div class="time-display" id="time-display">00:00:00</div>
+                <div class="milliseconds" id="milliseconds">000</div>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="control-button start">Start</button>
+                <button id="pause-btn" class="control-button pause" disabled>Pause</button>
+                <button id="reset-btn" class="control-button reset" disabled>Reset</button>
+                <button id="lap-btn" class="control-button lap" disabled>Lap</button>
+            </div>
+
+            <div class="lap-section">
+                <div class="lap-header">
+                    <h3>Lap Times</h3>
+                    <button id="clear-laps-btn" class="clear-laps-button" disabled>Clear All</button>
+                </div>
+                <div class="lap-times" id="lap-times">
+                    <div class="no-laps">No lap times recorded</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Stopwatch Application</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

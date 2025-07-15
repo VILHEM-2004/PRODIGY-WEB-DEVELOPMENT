@@ -1,0 +1,354 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Optional dark overlay */
+        url('./time.jpg'); /* Replace with your path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* better contrast for text */
+    padding: 1rem;
+}
+
+
+.container {
+    background: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Header styles */
+header h1 {
+    color: #4a5568;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Stopwatch display */
+.stopwatch-display {
+    background: linear-gradient(135deg, #f7fafc, #edf2f7);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #2d3748;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.milliseconds {
+    font-size: 1.5rem;
+    color: #718096;
+    font-family: 'Courier New', monospace;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Controls */
+.controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.control-button {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.control-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.control-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.control-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.start {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+}
+
+.pause {
+    background: linear-gradient(135deg, #ed8936, #dd6b20);
+    color: white;
+}
+
+.reset {
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+    color: white;
+}
+
+.lap {
+    background: linear-gradient(135deg, #667eea, #5a67d8);
+    color: white;
+}
+
+/* Lap section */
+.lap-section {
+    text-align: left;
+}
+
+.lap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.lap-header h3 {
+    color: #4a5568;
+    font-size: 1.3rem;
+}
+
+.clear-laps-button {
+    background: linear-gradient(135deg, #718096, #4a5568);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clear-laps-button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #4a5568, #2d3748);
+    transform: translateY(-1px);
+}
+
+.clear-laps-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.lap-times {
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 10px;
+    background: #f7fafc;
+    padding: 1rem;
+}
+
+.no-laps {
+    text-align: center;
+    color: #718096;
+    font-style: italic;
+    padding: 2rem;
+}
+
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease;
+}
+
+.lap-item:last-child {
+    margin-bottom: 0;
+}
+
+.lap-number {
+    font-weight: bold;
+    color: #667eea;
+    min-width: 80px;
+}
+
+.lap-time {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.lap-split {
+    font-family: 'Courier New', monospace;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.fastest-lap {
+    background: linear-gradient(135deg, #c6f6d5, #9ae6b4);
+    border-left: 4px solid #48bb78;
+}
+
+.slowest-lap {
+    background: linear-gradient(135deg, #fed7d7, #feb2b2);
+    border-left: 4px solid #e53e3e;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrollbar styling */
+.lap-times::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lap-times::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 3px;
+}
+
+.lap-times::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+.lap-times::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+footer p {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .time-display {
+        font-size: 2.5rem;
+    }
+
+    .milliseconds {
+        font-size: 1.2rem;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .control-button {
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+
+    .lap-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: stretch;
+    }
+
+    .lap-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.25rem;
+    }
+
+    .lap-number,
+    .lap-time,
+    .lap-split {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .time-display {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .milliseconds {
+        font-size: 1rem;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+.control-button:focus,
+.clear-laps-button:focus {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Running state indicator */
+.container.running .time-display {
+    color: #48bb78;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
