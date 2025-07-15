@@ -17,3 +17,9 @@ Welcome to SecureBank — a modern and responsive online banking interface. This
 - [Link to Project Repository](https://github.com/VILHEM-2004/PRODIGY-WEB-DEVELOPMENT/tree/main/PRODIGY_WD_01)
 
 - [Demo Link](https://vilhem-2004.github.io/PRODIGY-WEB-DEVELOPMENT/PRODIGY_WD_01/)
+
+2. **PRODIGY_WD_02 - Stop Watch Web Application**
+   </br></br>
+
+Description:
+Welcome to the Stopwatch Web Application — a precise and user-friendly tool designed to measure and track time intervals with accuracy. Developed using HTML, CSS, and JavaScript, this application offers an intuitive interface and smooth functionality, making it ideal for productivity, workouts, or time management tasks.
